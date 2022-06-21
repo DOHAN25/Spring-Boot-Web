@@ -58,6 +58,7 @@
   <body>
   	<div id="main-container">
   		<div id="main-header">
+  			<div id="button-box"></div>
   			<div id="main-content">
   					
   			</div>
