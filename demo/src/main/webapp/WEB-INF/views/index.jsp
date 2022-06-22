@@ -1,3 +1,7 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"
+         pageEncoding="utf-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +9,12 @@
   	<title>Main</title>
 	<!-- <link rel="stylesheet" type="text/css" href="../css/index.css"/> -->
 	<style>
+		body {
+			height: 100%;
+		}
 		#main-container {
-			width : 940px;
+			width : 1280px;
+			height : 100%;
 			margin : 10px auto;
 			padding : 20px;
 			border : 1px solid #bcbcbc;
@@ -17,13 +25,15 @@
 			flex-wrap : wrap;
 		}
 		#main-header {
-			padding : 20px;
-			margin-bottom : 20px;
-			border : 1px solid #bcbcbc;
-			background-color : yellow;
+			width : 1280px;
+			height: 100%;
+  			display: flex;
+  			align-items: center;
+  			justify-content: space-between;
+  			background-color : yellow;
 		}
 		#main-content {
-			width : 780px;
+			width : 1080px;
 			padding : 20px;
 			margin-bottom : 20px;
 			float : none;
@@ -32,7 +42,7 @@
 			
 		}
 		#main-footer {
-			width : 820px;
+			width : 1100px;
 			margin : 10px auto;
 			padding : 20px;
 			border : 1px solid #bcbcbc;
@@ -40,7 +50,7 @@
 			background-color : pink;
 		}
 		
-	<!--@media (max-width: 480px) {
+		@media (max-width: 480px) {
 			#main-container {
 				width : auto;
 			}
@@ -52,16 +62,33 @@
 				width : auto;
 			}
 		}
-		-->
+		#menu-area {
+			width : 100%;
+			background-color : green;
+		}
+		#button-area {
+			width : 100%;
+			background-color : white;
+		}
+		
 	</style>
   </head>
   <body>
+  <div id="main-header">
+  	<div id="menu-area">
+  		<select>
+  			<option>메뉴1</option>
+  		</select>
+  	</div>
+  	<div id="button-area">
+  		<button>로그인</button>
+  		<button>회원가입</button>
+  		<button>마이페이지</button>
+  	</div>
+  </div>
   	<div id="main-container">
-  		<div id="main-header">
-  			<div id="button-box"></div>
-  			<div id="main-content">
+  		<div id="main-content">
   					
-  			</div>
   		</div>
   		<div id="main-footer">
   		
