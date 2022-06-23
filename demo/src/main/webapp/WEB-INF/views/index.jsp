@@ -78,6 +78,7 @@
   	<div id="menu-area">
   		<select>
   			<option>메뉴1</option>
+  			<option>메뉴2</option>
   		</select>
   	</div>
   	<div id="button-area">
