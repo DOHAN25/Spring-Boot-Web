@@ -9,91 +9,44 @@
   	<title>Main</title>
 	<!-- <link rel="stylesheet" type="text/css" href="../css/index.css"/> -->
 	<style>
-		body {
-			height: 100%;
-		}
-		#main-container {
-			width : 1280px;
-			height : 100%;
+		.main-container {
+			width: 1024px;
 			margin : 10px auto;
 			padding : 20px;
 			border : 1px solid #bcbcbc;
-			background-color : black;
-			display : flex;
-			justify-content : center;
-			flex-direction : row;
-			flex-wrap : wrap;
 		}
-		#main-header {
-			width : 1280px;
-			height: 100%;
-  			display: flex;
-  			align-items: center;
-  			justify-content: space-between;
-  			background-color : yellow;
-		}
-		#main-content {
-			width : 1080px;
+		.main-nav {
 			padding : 20px;
 			margin-bottom : 20px;
-			float : none;
 			border : 1px solid #bcbcbc;
-			background-color : white;
-			
 		}
-		#main-footer {
-			width : 1100px;
-			margin : 10px auto;
+		.main-header {
+			padding : 20px;
+			margin-bottom : 20px;
+			border : 1px solid #bcbcbc;
+		}
+		.main-footer {
 			padding : 20px;
 			border : 1px solid #bcbcbc;
-			display : block;
-			background-color : pink;
 		}
-		
-		@media (max-width: 480px) {
-			#main-container {
-				width : auto;
-			}
-			#main-content {
-				float : none;
-				width : auto;
-			}
-			#main-footer {
-				width : auto;
-			}
+		@media (max-width : 480px) {
+			width : auto;
 		}
-		#menu-area {
-			width : 100%;
-			background-color : green;
-		}
-		#button-area {
-			width : 100%;
-			background-color : white;
-		}
-		
 	</style>
   </head>
   <body>
-  <div id="main-header">
-  	<div id="menu-area">
-  		<select>
-  			<option>메뉴1</option>
-  			<option>메뉴2</option>
-  		</select>
+ 	<div class="main-container">
+  	<header class="main-header">
+  		header 영역입니다. 이미지 나중에 삽
+  	</header>
+  	<nav class="main-nav">
+  		<button id="login" onclick="location.href='login'">로그인</button>
+  	</nav>
+  	<div id="">
+  	
   	</div>
-  	<div id="button-area">
-  		<button>로그인</button>
-  		<button>회원가입</button>
-  		<button>마이페이지</button>
-  	</div>
-  </div>
-  	<div id="main-container">
-  		<div id="main-content">
-  					
-  		</div>
-  		<div id="main-footer">
-  		
-  		</div>
+  	<footer class="main-footer">
+  	</footer>
   	</div>
   </body>
 </html>
