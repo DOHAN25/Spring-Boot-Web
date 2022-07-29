@@ -37,16 +37,58 @@
   <body>
  	<div class="main-container">
   	<header class="main-header">
-  		header 영역입니다. 이미지 나중에 삽
+  		Header 영역
   	</header>
-  	<nav class="main-nav">
-  		<button id="login" onclick="location.href='login'">로그인</button>
-  	</nav>
-  	<div id="">
+  	<div class="main-nav">
+  		<div class="right-mn">
+  			<ul class="mem-info">
+  				<li><span></span>{user.name}(userRoleNm)</li>
+  				
+  			</ul>
+  			
+  			<ul class="">
+  			
+  			</ul>
+  		</div>
+  		<div class="right-mu">
+  			<ul class="mem-menu">
+  				<li><a>마이페이지</a></li>
+  				<li><a href="mainPage.onClickLogout();">로그아웃</a></li>
+  				<li><a href="mainPage.onCLickLogin();">로그인</a><li>
+  			</ul>
+  		</div>
+  		
+  	</div>
+  	<div id="mainContentsArea">
   	
   	</div>
   	<footer class="main-footer">
+  		<div class="footer-container">
+  			<ul class="company-info">
+  				<li>(주)회사이름</li>
+  				<li>사업자등록번호</li>
+  				<li>주소</li>
+  				<li>Email. ehgks3323@naver.com</li>
+  			</ul>
+  			<p>Copyright © 2022 Crop.All rights reserved</p>
+  		</div>
   	</footer>
   	</div>
   </body>
+  
+  
+  
+ <script type="text/javascript">
+ 	var mainPage = {
+ 		onClickLogin : function() {
+ 			
+ 		},
+ 		onClickLogOut : function() {
+ 			
+ 		}
+ 			
+ 			
+ 	}
+ 
+ </script> 
 </html>
