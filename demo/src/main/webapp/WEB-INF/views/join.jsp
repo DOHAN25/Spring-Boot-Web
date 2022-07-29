@@ -78,7 +78,7 @@ input[type=submit]{
 </style>
 </head>
 <body>
-	<form action="" method="POST">
+	<form id="signUpParam" onsubmit="joinPage.signUp();" method="POST">
 		<div id="main-container">
 			<div class="input-box">
                 <input id="userId" type="text" name="userId" placeholder="아이디">
@@ -212,7 +212,23 @@ input[type=submit]{
 	        // 실행되는 순간의 화면 너비와 높이 값을 가져와서 중앙에 뜰 수 있도록 위치를 계산한다.
 	        element_layer.style.left = (((window.innerWidth || document.documentElement.clientWidth) - width)/2 - borderWidth) + 'px';
 	        element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
-		}	
+		},
+		signUp : function() {
+			// 회원가입 시 입력 필드에 대한 유효성검사 처리
+			
+			// 한글, 영어, 숫자, 특수문자 구분 정규식 모음
+			var checkNum = /[0-9]/;
+			var checkEng = /[a-zA-Z]/;
+			var checkSpc = /[~!@#$%^&*()_+|<>?:{}]/;
+			var checkKor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+			
+			var userId = $("#signUpParam #userId").val();
+			alert("유효설시");
+			if(checkKor.test(userId)) {
+				alert("아이디를 숫자로 설정할 수 없습니다.");
+				return false;
+			}
+		}
 	}
 	
 	
