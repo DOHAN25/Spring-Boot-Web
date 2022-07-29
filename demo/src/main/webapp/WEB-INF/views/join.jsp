@@ -101,6 +101,10 @@ input[type=submit]{
 				<span><input id="femaleCheck" type="checkbox" name="userSex" value="F">여</span>
 			</div>
 			<div class="input-box">
+				<input id="userEmail" type="text" name="userEmail" placeholder="이메일">
+				<label for="userEmail">이메일</label>
+			</div>
+			<div class="input-box">
 				<input id="userPostCode" type="text" name="userPostCode" placeholder="우편번호" onclick="joinPage.execDaumPostcode();">
 				<label for="userPostCode">우편번호</label>
 			</div>
@@ -132,6 +136,10 @@ input[type=submit]{
         // iframe을 넣은 element를 안보이게 한다.
         element_layer.style.display = 'none';
     }
+	
+
+	
+	
 	
 	var joinPage = {
 		
@@ -214,20 +222,9 @@ input[type=submit]{
 	        element_layer.style.top = (((window.innerHeight || document.documentElement.clientHeight) - height)/2 - borderWidth) + 'px';
 		},
 		signUp : function() {
-			// 회원가입 시 입력 필드에 대한 유효성검사 처리
+			var param = {};
 			
-			// 한글, 영어, 숫자, 특수문자 구분 정규식 모음
-			var checkNum = /[0-9]/;
-			var checkEng = /[a-zA-Z]/;
-			var checkSpc = /[~!@#$%^&*()_+|<>?:{}]/;
-			var checkKor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
 			
-			var userId = $("#signUpParam #userId").val();
-			alert("유효설시");
-			if(checkKor.test(userId)) {
-				alert("아이디를 숫자로 설정할 수 없습니다.");
-				return false;
-			}
 		}
 	}
 	
