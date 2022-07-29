@@ -33,6 +33,10 @@
 	margin-top: 20px;
 	margin-bottom : 20px;
 }
+.input-box:nth-child(6) {
+	display : inline-block;
+	width: 50%;
+}
 #post-area {
 	float:left;
 }
@@ -96,15 +100,9 @@ input[type=submit]{
 				<span><input id="maleCheck" type="checkbox" name="userSex" value="M">남</span>
 				<span><input id="femaleCheck" type="checkbox" name="userSex" value="F">여</span>
 			</div>
-			
-			<div id="post-area">
-				<div class="input-box">
-					<input id="userPostNm" type="text" name="userPostNm" placeholder="우편번호">
-					<label for="userPostNm">우편번호</label>
-					<div id="postButton">
-						<button>우편번호 찾기</button>
-					</div>
-				</div>
+			<div class="input-box">
+				<input id="userPostNm" type="text" name="userPostNm" placeholder="우편번호" onclick="joinPage.execDaumPostcode();">
+				<label for="userPostNm">우편번호</label>
 			</div>
 			<div class="input-box">
 				<input id="userAddr" type="text" name="userAddr" placeholder="주소">
@@ -118,7 +116,22 @@ input[type=submit]{
             <button onclick="goRegist();" style="display:none;">회원가입</button>
 		</div>
 	</form>
+	
+	<div id="layer" style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
+		<img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnCloseLayer" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" onclick="closeDaumPostcode()" alt="닫기 버튼">
+	</div>
 <script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+	
+	var joinPage = {
+		execDaumPostcode : function() {
+			// 우편번호 찾기 api 실행되는곳
+		}
+		
+	}
+	
 	
 	
 	$("#maleCheck").click(function() {
@@ -127,7 +140,6 @@ input[type=submit]{
 	$("#femaleCheck").click(function() {
 		$("#maleCheck").prop("checked", false);
 	});
-
 </script>
 </body>
 </html>
