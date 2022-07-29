@@ -25,6 +25,11 @@
 			margin-bottom : 20px;
 			border : 1px solid #bcbcbc;
 		}
+		#mainContentsArea {
+			padding : 20px;
+			margin-bottom : 20px;
+			border : 1px solid #bcbcbc;
+		}
 		.main-footer {
 			padding : 20px;
 			border : 1px solid #bcbcbc;
@@ -59,9 +64,13 @@
   		</div>
   		
   	</div>
-  	<div id="mainContentsArea">
   	
+  	
+  	<div id="mainContentsArea">
+  		main content area
   	</div>
+  	
+  	
   	<footer class="main-footer">
   		<div class="footer-container">
   			<ul class="company-info">
