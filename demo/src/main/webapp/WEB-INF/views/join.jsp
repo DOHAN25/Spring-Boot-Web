@@ -49,7 +49,7 @@ input:focus, input:not(:placeholder-shown){
   outline:none;
 }
 input[type=submit]{
-                background-color: #8aa1a1;
+                background-color: #333333;
                 border:none;
                 color:white;
                 border-radius: 5px;
@@ -69,17 +69,25 @@ input[type=submit]{
 <body>
 	<form action="" method="POST">
 		<div id="main-container">
-			 <div class="input-box">
-                <input id="username" type="text" name="username" placeholder="아이디">
-                <label for="username">아이디</label>
+			<div class="input-box">
+				<input id="userName" type="text" name="userName" placeholder="이름">
+				<label for="userName">이름</label>
+			</div>
+			<div class="input-box">
+                <input id="userId" type="text" name="userId" placeholder="아이디">
+                <label for="userId">아이디</label>
             </div>
-
             <div class="input-box">
                 <input id="password" type="password" name="password" placeholder="비밀번호">
                 <label for="password">비밀번호</label>
             </div>
-            <div id="findPw">비밀번호 찾기</div>
-            <input type="submit" value="로그인">
+          	<div class="input-box">
+          		<input id="passwordConfirm" type="password" name="passwordConfirm" palceholder="비밀번호 확인">
+          		<label for="passwordConfirm">비밀번호 확인</label>
+          	</div>
+          	<div>
+          	</div>
+            <input type="submit" value="회원가입하기">
             <button onclick="goRegist();" style="display:none;">회원가입</button>
 		</div>
 	</form>
