@@ -105,6 +105,10 @@ input[type=submit]{
 				<label for="userEmail">이메일</label>
 			</div>
 			<div class="input-box">
+				<input id="userPhNum" type="text" name="userPhNum" placeholder="핸드폰 번호">
+				<label for="userPhNum">핸드폰 번호</label>
+			</div>
+			<div class="input-box">
 				<input id="userPostCode" type="text" name="userPostCode" placeholder="우편번호" onclick="joinPage.execDaumPostcode();">
 				<label for="userPostCode">우편번호</label>
 			</div>
