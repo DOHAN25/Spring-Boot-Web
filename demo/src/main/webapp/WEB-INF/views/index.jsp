@@ -35,7 +35,9 @@
 			border : 1px solid #bcbcbc;
 		}
 		@media (max-width : 480px) {
-			width : auto;
+			body {
+				width : auto;
+			}
 		}
 	</style>
   </head>
@@ -57,10 +59,14 @@
   		</div>
   		<div class="right-mu">
   			<ul class="mem-menu">
-  				<li><a>마이페이지</a></li>
+  				<li><a href="">마이페이지</a></li>
   				<li><a href="mainPage.onClickLogout();">로그아웃</a></li>
-  				<li><a href="mainPage.onCLickLogin();">로그인</a><li>
+  				<li><a href="login.page">로그인</a><li>
+  				<li><a href="join.page">회원가입</a></li>
   			</ul>
+  		</div>
+  		
+  		<div class="menu-nav">
   		</div>
   		
   	</div>
