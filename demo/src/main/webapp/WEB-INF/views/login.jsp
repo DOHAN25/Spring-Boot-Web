@@ -65,6 +65,11 @@ input[type=submit]{
                 color:rgb(164, 164, 164);
                 margin:10px 0px;
             }
+            @media (max-width : 480px) {
+				body {
+					width : auto;
+				}
+			}
 </style>
 <script type="text/javascript">
 	function login() {
