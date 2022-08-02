@@ -71,11 +71,30 @@ input[type=submit]{
 				}
 			}
 </style>
-<script type="text/javascript" src="https://code.jqury.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script type="text/javascript">
 	function login() {
 		var userId = $("#userId").val().trim();
-		var password = #("userPw").val().trim();
+		var password = $("#userPw").val().trim();
+		
+		var userInfo = {
+				"userId" : userId,
+				"userPw" : password
+		}
+		
+		$.ajax({
+			type:"post",
+			url:"login.do",
+			data: JSON.stringify(userInfo),
+			contentType: "application/json",
+			dataType: "json",
+			success : function(data) {
+				alert("환영합니다");
+			},
+			error : function() {
+				alert("통신실패");
+			}
+		})
 	}
 </script>
 </head>
@@ -84,13 +103,13 @@ input[type=submit]{
 	<form id="userInfoParam" onsubmit="login();" method="POST">
 		<div id="main-container">
 			 <div class="input-box">
-                <input id="username" type="text" name="username" placeholder="아이디">
-                <label for="username">아이디</label>
+                <input id="userId" type="text" name="userId" placeholder="아이디">
+                <label for="userId">아이디</label>
             </div>
 
             <div class="input-box">
-                <input id="password" type="password" name="password" placeholder="비밀번호">
-                <label for="password">비밀번호</label>
+                <input id="userPw" type="password" name="userPw" placeholder="비밀번호">
+                <label for="userPw">비밀번호</label>
             </div>
             <div id="findPw">비밀번호 찾기</div>
             <input type="submit" value="로그인">
