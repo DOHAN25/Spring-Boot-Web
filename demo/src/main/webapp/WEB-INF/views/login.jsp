@@ -71,6 +71,7 @@ input[type=submit]{
 				}
 			}
 </style>
+<script type="text/javascript" src="https://code.jqury.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
 	function login() {
 		var userId = $("#userId").val().trim();
@@ -80,7 +81,7 @@ input[type=submit]{
 </head>
 <body>
 
-	<form action="" method="POST">
+	<form id="userInfoParam" onsubmit="login();" method="POST">
 		<div id="main-container">
 			 <div class="input-box">
                 <input id="username" type="text" name="username" placeholder="아이디">
